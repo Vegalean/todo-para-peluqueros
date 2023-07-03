@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <div class="page-nav">
+        <h1>Todo Para peluqueros</h1>
+        <button id="checkout" class="button-checkout" onclick="pay()">Pagar</button>
+    </div>
+    <div class="page-content">
+        <div class="product-container">
+            <h3>Capa de peluqueros con ganchos lisa negra</h3>
+            <img src="https://www.teveslindapro.cl/wp-content/uploads/2021/01/Capa-Negra.jpg"/>
+            <h1>$50</h1>
+            <button class="button-add" onclick="add('product-1', 50)">Agregar</button>
+        </div>
+
+        <div class="product-container">
+            <h3>Mascara capilar keratina Fidelite 270g</h3>
+            <img src="https://th.bing.com/th/id/R.f1c805b1565bc636ef12005913ccd94e?rik=CpcjMXQen3t6%2bg&pid=ImgRaw&r=0" />
+            <h1>$300</h1>
+            <button class="button-add" onclick="add('product-2', 300)">Agregar</button>
+        </div>
+
+        <div class="product-container">
+            <h3>Crema acida Fidelite 270g</h3>
+            <img src="https://th.bing.com/th/id/R.3a46a439ef82814026910769f69dd169?rik=tGWY0SpfLE9TcA&pid=ImgRaw&r=0" />
+            <h1>$250</h1>
+            <button class="button-add" onclick="add('product-3', 250)">Agregar</button>
+        </div>
+
+        <div class="product-container">
+            <h3>Mascara capilar coco y vain Fidelite 270g</h3>
+            <img src="https://th.bing.com/th/id/R.c08d5b669b54c639524f48fddd6a3c77?rik=GF5%2bdcXSUm12ew&riu=http%3a%2f%2fwww.fidelite.com.ar%2fmascara%2fimg%2fproductos%2f77%2fmascaracocovainilla270.jpg&ehk=6Q%2bW%2ftKy40soGY0gtMf7iKWqotRBQbGBWYr%2f%2bzr%2fQZo%3d&risl=&pid=ImgRaw&r=0" />
+            <h1>$200</h1>
+            <button class="button-add" onclick="add('product-4', 200)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Brillo insta.Argan Fidelite 120</h3>
+            <img src="https://th.bing.com/th/id/R.1fe17c5867c144cdd1b79e06fb2bba0b?rik=423ucNam8ai1Pw&pid=ImgRaw&r=0" />
+            <h1>$650</h1>
+            <button class="button-add" onclick="add('product-6', 650)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Crema de peinado teñidos CAVIAR FIDELITE  250ml </h3>
+            <img src="https://somosflowshop.com.ar/wp-content/uploads/2022/06/crema-de-peinado-teniidos.jpg" />
+            <h1>$650</h1>
+            <button class="button-add" onclick="add('product-6', 650)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Crema de peinado lacios CAVIAR FIDELITE 250ml</h3>
+            <img src="https://somosflowshop.com.ar/wp-content/uploads/2022/06/crema-de-peinado-lacios.jpg" />
+            <h1>$650</h1>
+            <button class="button-add" onclick="add('product-6', 650)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Crema de peinado risos CAVIAR FIDELITE 250ml </h3>
+            <img src="https://th.bing.com/th/id/R.888dc3d4b5af225dc90da2e50b48efd0?rik=TW0r%2fM4OZ2W%2b1g&pid=ImgRaw&r=0" />
+            <h1>$650</h1>
+            <button class="button-add" onclick="add('product-6', 650)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Shampoo FRILAYP NEUTRO 370 ml</h3>
+            <img src="https://http2.mlstatic.com/D_NQ_NP_800567-MLA51510161641_092022-O.webp" />
+            <h1>$650</h1>
+            <button class="button-add" onclick="add('product-6', 650)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Mascara capilar ARGAN FIDELITE 1KG</h3>
+            <img src="https://th.bing.com/th/id/OIP.xnz3lAs-KMOb_nqSJmGaLgHaLT?pid=ImgDet&rs=1" />
+            <h1>$650</h1>
+            <button class="button-add" onclick="add('product-6', 650)">Agregar</button>
+        </div>
+        <!--div class="product-container">
+            <h3>Renovación capilar en ampolla btx MARY BOSQUES </h3>
+            <img src="images/product-6.jpg" />
+            <h1>$650</h1>
+            <button class="button-add" onclick="add('product-6', 650)">Agregar</button>
+        </div-->
+        <div class="product-container">
+            <h3>Revelador FRILAYP 920 cc </h3>
+            <img src="https://th.bing.com/th/id/R.3b4f2d1c0e31e86eea80b096b5d89e97?rik=7gVp4Z0kVNpD9g&pid=ImgRaw&r=0" />
+            <h1>$650</h1>
+            <button class="button-add" onclick="add('product-6', 650)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Crema oxidante Almendras FRILAYP vol 30 920cc </h3>
+            <img src="https://th.bing.com/th/id/OIP.k6JYu6dcabqQ1MjqUdJ-YAHaHa?pid=ImgDet&rs=1" />
+            <h1>$650</h1>
+            <button class="button-add" onclick="add('product-6', 650)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Crema oxidante Almendras FRILAYP vol 20 920 cc </h3>
+            <img src="https://d22fxaf9t8d39k.cloudfront.net/3cd555f2c5c4ba48090c026fcb80a10edde6398a08d8aa38e5e8579d37a55b3687411.jpeg" />
+            <h1>$650</h1>
+            <button class="button-add" onclick="add('product-6', 650)">Agregar</button>
+        </div>
+        <div class="product-container">
+            <h3>Coloración crema OPCION  Caja de 2 uni de 60g </h3>
+            <img src="https://th.bing.com/th/id/OIP.CKuaj-_t7foiRTQXP-wlBwAAAA?pid=ImgDet&w=445&h=568&rs=1" />
+            <h1>$650</h1>
+            <button class="button-add" onclick="add('product-6', 650)">Agregar</button>
+        </div>
+        </div>
+</body>
